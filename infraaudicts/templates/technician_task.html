@@ -1,0 +1,140 @@
+<div class="createbtn"><a href="techcreate"> Create new</a></div>
+<!-- <div id="table-container">
+
+<table id="customers">
+  <tr>
+    <th>Technician ID</th>
+    <th>Name</th>
+    <th>Area</th>
+    <th>Deadline</th>
+    <th>Update</th>
+    <th>Delete</th>
+    <th>Status</th>
+
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Berglunds snabbköp</td>
+    <td>Christina Berglund</td>
+    <td>Sweden</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Königlich Essen</td>
+    <td>Philip Cramer</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+  <tr>
+    <td>North/South</td>
+    <td>Simon Crowther</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Paris spécialités</td>
+    <td>Marie Bertrand</td>
+    <td>France</td>
+  </tr>
+
+</table> -->
+<!-- </div> -->
+<!-- <div class="createbtn">
+    <a href="techcreate">Create New</a>
+</div>
+
+<div id="table-container">
+    <table id="customers">
+        <tr>
+            <th>Technician ID</th>
+            <th>Name</th>
+            <th>Area</th>
+            <th>Deadline</th>
+            <th>Update</th>
+            <th>Delete</th>
+            <th>Status</th>
+        </tr>
+        {% for technician in technicians %}
+        <tr>
+            <td>{{ technician.technician_id }}</td>
+            <td>{{ technician.name }}</td>
+            <td>{{ technician.area }}</td>
+            <td>{{ technician.deadline }}</td>
+            <td><a href="{% url 'update_technician' technician.id %}">Update</a></td>
+            <td><a href="{% url 'delete_technician' technician.id %}">Delete</a></td>
+            <td>Pending</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div> -->
+
+
+<div class="containermain">
+    <div id="table-container">
+        
+        <table id="customers">
+            <thead>
+                <tr>
+                    <th>Technician ID</th>
+                    <th>Name</th>
+                    <th>Area</th>
+                    <th>Deadline</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                    <th>Status</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for technician in datas%}
+                <tr>
+                    <td>{{ technician.Tech_ID }}</td>
+                    <td>{{ technician.name }}</td>
+                    <td>{{ technician.area }}</td>
+                    <td>{{ technician.Deadline }}</td>
+                    
+                    <td> <div class="ubtn"><a href="update{{technician.id}}" > Update </a></div></td>
+                    <td> <div class="dbtn"><a href="delete{{technician.id}}"> Delete </a></div></td>  
+                </tr>
+                {% endfor %}
+                
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+
+
+<div class="containermain">
+    <div id="table-container">
+        
+        <table id="customers">
+            <thead>
+                <tr>
+                    <th>Auditor ID</th>
+                    <th>Name</th>
+                    <th>Area</th>
+                    <th>Deadline</th>
+                    <th>form</th>
+                    <th>Image</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for technician in datas%}
+                <tr>
+                    <td>{{ technician.Audi_ID }}</td>
+                    <td>{{ technician.name }}</td>
+                    <td>{{ technician.area }}</td>
+                    <td>{{ technician.Deadline }}</td>
+                    <td><a href="audiquery">fill the form</a></td>
+                    <td>{{ technician.description }}</td>
+                    <td>
+                        {% if data.image %}
+                        <img src="{{ technician.image.url }}" alt="Image" style="width:100px;height:auto;">
+                        {% endif %}
+                    </td>
+                    
+                </tr>
+                {% endfor %}
+                
+                <!-- {% for data in data1 %}
+                {% if data.image %}
+                <td> -->
+                    <!-- <img src="{{ data.image.url }}" alt="Image" style="width:100px;height:auto;"> -->
+                     <!-- fgh
+                </td> -->
+                <!-- {% endif %}
+                {% endfor %} -->
+
+            </tbody>
+        </table>
+    </div>
+</div>

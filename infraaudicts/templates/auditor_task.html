@@ -1,0 +1,36 @@
+<div class="createbtn"><a href="audicreate"> Create new</a></div>
+
+
+<div class="containermain">
+    <div id="table-container">
+        
+        <table id="customers">
+            <thead>
+                <tr>
+                    <th>Auditor ID</th>
+                    <th>Name</th>
+                    <th>Area</th>
+                    <th>Deadline</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                    <th>Status</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for technician in datas%}
+                <tr>
+                    <td>{{ technician.Audi_ID }}</td>
+                    <td>{{ technician.name }}</td>
+                    <td>{{ technician.area }}</td>
+                    <td>{{ technician.Deadline }}</td>
+                    
+                    <td> <div class="ubtn"><a href="update{{technician.id}}" > Update </a></div></td>
+                    <td> <div class="dbtn"><a href="delete{{technician.id}}"> Delete </a></div></td>  
+                </tr>
+                {% endfor %}
+                
+            </tbody>
+        </table>
+    </div>
+</div>
